@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+.header{
+    width: 80vw;
+    height: 10vh;
+    background-color: #f3f1f1;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 4px 7px 4px rgb(0, 0, 0, .30);
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header nav{
+    margin-left: 16px;
+}
+.buttons ul{
+    display: flex;
+    list-style:none ;
+    align-items:center;
+}
+.buttons ul li{
+    margin-left: 16px;
+    font-family: 'Inter';
+    font-size: 14px;
+    cursor: pointer;
+}
+.link{
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid transparent;
+}
+.link:hover{
+    transition: 0.5s;
+    color: #FF7735;
+    cursor: pointer;
+    border-color: gray;
+}
+.link h1{
+    color: rgb(0, 0, 0);
+    font-family: 'Inter';
+    font-size: 32px;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+}.link h1:hover{
+    color: #FF7735;
+    transition: .5s;
+    border-color: #FF7735;
+}
+
+.link h1 span{
+    color: #FF7735;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
+    font-size: 14px;
+}
+.icons span{
+    margin-right: 28px;
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.icons:hover{
+    color: #FF7735;
+    transition: 0.2s;
+    cursor: pointer;
+}

@@ -1,0 +1,113 @@
+.containerShoes{
+    width: 35vw;
+    margin: 5vh 10vw;
+    border: 1px solid gray;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    display: flex;
+
+}
+.bottomImages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.previewImages{
+    border: #333 1px solid ;
+    margin: 10px ;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.previewImage{
+    width: 30vw;
+    height: 30vw;
+}
+.div_left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div_left div{
+    cursor: zoom-in;
+}
+.div_rigth{
+    width: 50vw;
+    height: 80vh;
+    margin-left: 9vw;
+    background-color: #f3f1f1;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+}
+.container_Rigth{
+    width: 40vw;
+    margin: 3px;
+}
+.container_Rigth p{
+    color: #FF9562;
+    margin: 6vh 3vw ;
+}
+.container_Rigth h1{
+    text-align: center;
+}
+.container_Rigth h1 span{
+    color: #FF9562;
+}
+.description p{
+    color: #000;
+    text-align: center;
+}
+.price p {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+.price p span{
+    color: #FF9562;
+    margin-left: 16px;
+    background-color: #333;
+    padding: 4px;
+    font-size: 12px;
+}   
+#defaultPrice{
+    text-decoration: line-through;
+    color:#333 ;
+    margin-top: 0;
+}
+.buttonsContainer , .buttonsDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+}
+.buttonsDiv button ,.addCart button , .buttonsDiv div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.buttonsDiv div{
+    background-color: #ccc;
+    text-align: center;
+    cursor: default;
+}
+.buttonsDiv button , .buttonsDiv div{
+    border-radius: 5px;
+    border: 1px solid gray;
+    width: 40px;
+    height: 35px;
+    margin: 5px;
+}
+.addCart button{
+    height: 35px;
+    width: 150px;
+    margin-left: 8px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background-color: #FF9562;
+    color: #000;    
+    margin-top: 10vh;
+}
+.icon{
+    margin: 0 0 0 8px;
+}
