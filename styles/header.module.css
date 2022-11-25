@@ -54,14 +54,14 @@
 .link h1 span{
     color: #FF7735;
 }
-.icons{
+.cart{
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Inter';
     font-size: 14px;
-}
-.icons span{
+}   
+.cart span{
     margin-right: 28px;
 }
 .icon{
@@ -70,8 +70,14 @@
     margin-right: 8px;
     cursor: pointer;
 }
-.icons:hover{
+.cart:hover{
     color: #FF7735;
     transition: 0.2s;
     cursor: pointer;
+}
+
+@media(max-width:600px){
+    .buttons{
+        display: none;
+    }
 }

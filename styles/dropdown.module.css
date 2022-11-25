@@ -1,0 +1,31 @@
+.drop li{
+    list-style: none;
+}
+.dropMenu{
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: rgba(3,3,3,.5);
+    display: none;
+    flex-direction: column;
+    transition: .6s;
+    align-items: center;
+    width: 30vw;
+    color: white; 
+}
+.dropMenu .active{
+    display: flex;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+}
+.dropMenu button{
+    color: #000;
+}
+.dropicon{
+    display: flex;
+    color: black;
+}

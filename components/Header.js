@@ -1,6 +1,9 @@
 import Link from 'next/link'
 import styles from '../styles/header.module.css'
 import {HiOutlineShoppingCart} from 'react-icons/hi'
+import Drop from './Drop'
+import Cart from './Cart'
+
 function Header() {
   return (
     // NavBar
@@ -13,9 +16,11 @@ function Header() {
                 <li><Link href='/about' className={styles.link}>About</Link></li>
                 <li><Link href='/contact' className={styles.link}>Contact</Link></li>
             </ul>
+        {/* Dropdown Pra fazer*/}
+        <Drop/>
             </div>
         </nav>
-        <div className={styles.icons}>
+        <div className={styles.cart}>
                 <HiOutlineShoppingCart className={styles.icon}/>
                 <span>Cart</span>
         </div>
