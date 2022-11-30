@@ -6,12 +6,15 @@ import ShoesRight from "../../../components/ShoesRight";
 function index() {
   return (
     <div className={styles.containerShoes}>
-        <div className={styles.div_left}>
-        <Shoes imageSrc = {'/assets/Shoe_Duramo_M_Front.png'} imageSrcB = {'/assets/Shoe_Duramo_M_Back.png'}/>
+      <div className={styles.div_left}>
+        <Shoes
+          imageSrc={"/assets/Duramo_M_Front.png"}
+          imageSrcB={"/assets/Duramo_M_Back.png"}
+        />
       </div>
       {/* Lado direito do produto que contem informações sobre o mesmo e o botao para add no cart juntamente com a escolha de quantos produtos */}
       <div className={styles.div_rigth}>
-        <ShoesRight price={130}/>
+        <ShoesRight price={130} />
       </div>
     </div>
   );

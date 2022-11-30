@@ -1,32 +1,34 @@
-import styles from '../styles/dropdown.module.css'
-import {CgDetailsMore} from 'react-icons/cg'
-import Link from 'next/link'
-
-
+import styles from "../styles/dropdown.module.css";
+import { CgDetailsMore } from "react-icons/cg";
+import Link from "next/link";
+import { useState } from "react";
 
 function Drop() {
-    function drop(){
-        let drop = document.getElementById('drop')
-        if(drop.className == 'dropdown_drop__fRujW active'){
-            drop.classList.remove('active')
-        }else{
-            drop.classList.add('active')
-        }
-      }
+  let [change,setChange] = useState(false)
   return (
-    <div>
-        <div className={styles.dropMenu}>
-            <button>
-              <CgDetailsMore size={35} className={styles.dropicon} onClick={()=>drop()}/>
-            </button>
-              <ul className={styles.drop} id='drop'>
-              <Link href='/' className={styles.link}><li>Collections</li></Link>
-              <Link href='/about' className={styles.link}><li>About</li></Link>
-              <Link href='/contact' className={styles.link}> <li>Contact</li></Link>
-            </ul>
-              </div>
+    //DropDown Menu
+    <div className={styles.Container}>  
+      <div className={styles.dropMenu}>
+      <div className={styles.dropIcon} onClick={() => change == false ? setChange(change = true): setChange(change = false)}>
+        <CgDetailsMore size={35} className={styles.Icon} />
+      </div>
+        {change == false ? null: 
+        <div className={styles.ContainerDrop}>
+          <ul className={styles.drop}>
+            <Link href="/" className={styles.link}>
+              <li>Collections</li>
+            </Link>
+            <Link href="/about" className={styles.link}>
+              <li>About</li>
+            </Link>
+            <Link href="/contact" className={styles.link}>
+              <li>Contact</li>
+            </Link>
+          </ul>
+        </div>}
+      </div>
     </div>
-  )
+  );
 }
 
-export default Drop
+export default Drop;

@@ -1,0 +1,42 @@
+.container{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.link{
+    width: 30vw;
+    height: 50vh;
+    background-color: #7f340f;
+    border-radius: 20px;
+    margin: 0 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.icon{
+    width: 20vw;
+    height: 20vh;
+    color: #e5e5e5;
+}
+.link h2{
+    color: #ccc;
+    font-size: 1.6rem;
+    margin: 2vh 0;
+}
+.link p{
+    color: #e5e5e5;
+    font-size: 1rem;
+}
+@media(max-width:800px){
+    .container{
+        flex-direction: column;
+        margin: 25vw auto;
+    }
+    .link{
+        margin: 1vh 0;
+        width: 80vw;
+    }
+}

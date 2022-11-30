@@ -1,31 +1,46 @@
-import Link from 'next/link'
-import styles from '../styles/header.module.css'
-import {HiOutlineShoppingCart} from 'react-icons/hi'
-import Drop from './Drop'
-import Cart from './Cart'
+import Link from "next/link";
+import styles from "../styles/header.module.css";
+import { HiOutlineShoppingCart } from "react-icons/hi";
+import Drop from "./Drop";
 
 function Header() {
   return (
     // NavBar
     <div className={styles.header}>
-        <nav>
-            <div className={styles.buttons}>
-            <Link href='/' className={styles.link}><h1><span>Sneak</span>ers</h1></Link>
-            <ul>
-                <li><Link href='/' className={styles.link}>Collections</Link></li>
-                <li><Link href='/about' className={styles.link}>About</Link></li>
-                <li><Link href='/contact' className={styles.link}>Contact</Link></li>
+      <nav>
+        <div className={styles.Links}>
+          <Link href="/" className={styles.link}>
+            <h1>
+              <span>Sneak</span>ers
+            </h1>
+          </Link>
+          <div>
+            <ul className={styles.menu}>
+              <li>
+                <Link href="/" className={styles.link}>
+                  Coleções
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className={styles.link}>
+                  Sobre
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className={styles.link}>
+                  Contato
+                </Link>
+              </li>
             </ul>
-        {/* Dropdown Pra fazer*/}
-        <Drop/>
+          </div>
+          {/* Dropdown Pra fazer*/}
+            <div>
+            <Drop />  
             </div>
-        </nav>
-        <div className={styles.cart}>
-                <HiOutlineShoppingCart className={styles.icon}/>
-                <span>Cart</span>
         </div>
+      </nav>
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;

@@ -1,17 +1,21 @@
-.container_cards {
-    display: grid;
-    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
-    margin-top: 35vh;
-}
-
-.cards {
-    margin: 10px 3vw;
-    border-radius: 15px;
+.cardContainer {
+    width: 80vw;
+    height: 130vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    background-color: #222;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+    margin-top: 70vh;
+}
+
+.container_cards {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    margin-top: 50vh;
+    
 }
 
 .cards:hover {
@@ -20,69 +24,80 @@
     transform: scale(1.1);
 }
 
-.cardContainer {
-    width: 80vw;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #e6e5e5;
-    flex-direction: column;
-    border-radius: 15px;
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
-}
-
 .cardContainer h1 {
     color: #FF7735;
     margin-bottom: 3rem;
-
 }
 
 .product {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #333;
     flex-direction: column;
     margin: 6px;
     padding: 10px;
     border-radius: 10px;
+    
 }
 
 .product h2 {
-    /* background-color: #7f340f; */
     background-color: #FF7735;
-    color: white;
-    font-size: 1rem;
+    color: #fff;
+    font-size: .8rem;
+    padding: 5px;
+    border-radius: 4px;
 }
-.product h3{
-    font-size: 1rem;    
+
+.product h3 {
+    margin: 3vh 0;
+    font-size: .9rem;
+    color: #e5e5e5;
 }
+
 .link {
     text-decoration: none;
-    /* color: #FF7735; */
+    margin: 4vh 3vw;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #7f340f;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    width: 20vw;
+    height: 50vh;
 }
-@media (max-width:1100px){
-    .cards{
-        width: 15vw;
-        height: 15vh;
-    }
-    .cardContainer{
-        width: 98vw;
-    }
+
+.cards {
+    width: 15vw;
+    height: 20vh;
 }
-@media (max-width:560px){
-    .container_cards{
+
+@media (max-width:650px) {
+    .container_cards {
         display: flex;
         flex-direction: column;
-        margin-top: 400vh;
+        margin-top: 550vh;
     }
-    .cardContainer{
+
+    .cardContainer {
         background-color: transparent;
         box-shadow: none;
+        margin-top: 30vh;
     }
-    .cards{
+
+    .cards {
         width: 90vw;
-        height: 60vh;
+        height: 50vh;
+    }
+
+    .link {
+        width: 90vw;
+        height: 100vh;
+    }
+
+    .product h2,
+    .product h3 {
+        font-size: 1.1rem;
     }
 }

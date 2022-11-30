@@ -9,13 +9,13 @@ function index() {
     <div className={styles.containerShoes}>
       <div className={styles.div_left}>
         <Shoes
-          imageSrc={"/assets/Shoe_Supernova_2_M_Front.png"}
-          imageSrcB={"/assets/Shoe_Supernova_2_M_Back.png"}
+          imageSrc={"/assets/Supernova_2_M_Front.png"}
+          imageSrcB={"/assets/Supernova_2_M_Back.png"}
         />
       </div>
       {/* Lado direito do produto que contem informações sobre o mesmo e o botao para add no cart juntamente com a escolha de quantos produtos */}
       <div className={styles.div_rigth}>
-        <ShoesRight price={80}/>
+        <ShoesRight price={80} />
       </div>
     </div>
   );

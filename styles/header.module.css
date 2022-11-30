@@ -1,83 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
-.header{
+.Links{
     width: 80vw;
     height: 10vh;
-    background-color: #f3f1f1;
-    margin: 0 auto;
+    background-color: #222;
+    margin: 0 10vw;
+    border: 1px solid #7f340f;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 4px 7px 4px rgb(0, 0, 0, .30);
+    align-items: center; 
+    justify-content: space-around;
+    box-shadow: 4px 7px 4px rgb(0, 0, 0, .10);
+    position: fixed;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
 }
-.buttons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.header nav{
-    margin-left: 16px;
-}
-.buttons ul{
+.Links ul{
     display: flex;
     list-style:none ;
     align-items:center;
 }
-.buttons ul li{
+.Links ul li{
     margin-left: 16px;
     font-family: 'Inter';
     font-size: 14px;
     cursor: pointer;
 }
+.Links h1{
+    margin: auto 16px;
+}
 .link{
     text-decoration: none;
-    color: #000;
-    border-bottom: 1px solid transparent;
+    color: #e5e5e5;
 }
 .link:hover{
     transition: 0.5s;
     color: #FF7735;
     cursor: pointer;
-    border-color: gray;
 }
 .link h1{
-    color: rgb(0, 0, 0);
+    color: #000;
     font-family: 'Inter';
-    font-size: 32px;
+    font-size: 2rem;
     cursor: pointer;
-    border-bottom: 1px solid transparent;
 }.link h1:hover{
     color: #FF7735;
     transition: .5s;
-    border-color: #FF7735;
 }
 
 .link h1 span{
     color: #FF7735;
 }
-.cart{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Inter';
-    font-size: 14px;
-}   
-.cart span{
-    margin-right: 28px;
-}
-.icon{
-    width: 30px;
-    height: 30px;
-    margin-right: 8px;
-    cursor: pointer;
-}
-.cart:hover{
-    color: #FF7735;
-    transition: 0.2s;
-    cursor: pointer;
-}
 
 @media(max-width:600px){
-    .buttons{
+    .menu li{
         display: none;
     }
 }
