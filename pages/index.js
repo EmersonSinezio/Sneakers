@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Main from './main/main'
+import Main from './main/index.js'
 export default function Home() {
   return (
     <div>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../../styles/shoes.module.css";
-import Shoes from "../../components/Shoes";
-import ShoesRight from "../../components/ShoesRight";
+import Shoes from "../../components/shoes.js";
+import ShoesRight from "../../components/shoesright.js";
 import {useRouter} from 'next/router'
 
 function Shoe() {
