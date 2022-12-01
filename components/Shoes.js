@@ -4,6 +4,7 @@ import {useState} from 'react'
 
 function Shoes({imageSrc, imageSrcB}) {
   let [image,setImage] = useState(imageSrc)
+  
   return (
     <div className={styles.left_container}>
         <div>

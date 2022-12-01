@@ -1,0 +1,2 @@
+> Parte de paginas que se repete os tenis
+> Fazer dar deploy num servidor

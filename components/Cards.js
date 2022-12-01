@@ -1,12 +1,12 @@
 import Image from "next/image";
 //Imagens dos tenis
 const Images = [
-  { name: "Duramo_F", price: 125 },
-  { name: "Duramo_M", price: 130 },
-  { name: "eq19_F", price: 280 },
-  { name: "Supernova_2_F", price: 280 },
-  { name: "Supernova_2_M", price: 80 },
-  { name: "Supernova_M", price: 180 },
+  { name: "Duramo_F" },
+  { name: "Duramo_M" },
+  { name: "eq19_F" },
+  { name: "Supernova_2_F" },
+  { name: "Supernova_2_M"},
+  { name: "Supernova_M" },
 ];
 import Link from "next/link";
 
@@ -18,7 +18,7 @@ function Cards() {
       {/* fazendo um map e colocando os produtos em cards juntamente com os nomes das imagens */}
       <div className={styles.container_cards}>
         {Images.map((i, index) => (
-          <Link href={`/shoes/Shoe_${i.name}`} key={index} className={styles.link}>
+          <Link href={`/shoes/${i.name}`} key={index} className={styles.link}>
             <div className={styles.product}>
               <Image
                 src={`/assets/${i.name}_Front.png`}
@@ -28,7 +28,7 @@ function Cards() {
                 alt={i.name}
               />
               <h3>{i.name}</h3>
-              <h2>${i.price}</h2>
+              <h2>$125</h2> 
             </div>
           </Link>
         ))}
