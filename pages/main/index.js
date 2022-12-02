@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from '../../styles/main.module.css'
-import Cards from '../../components/cards.js'
+import Cards from '../../components/cards'
 function Main() {
   return (
     <div className={styles.container}>
