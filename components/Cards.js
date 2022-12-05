@@ -5,7 +5,7 @@ const Images = [
   { name: "Duramo_M" },
   { name: "eq19_F" },
   { name: "Supernova_2_F" },
-  { name: "Supernova_2_M"},
+  { name: "Supernova_2_M" },
   { name: "Supernova_M" },
 ];
 import Link from "next/link";
@@ -28,7 +28,7 @@ function Cards() {
                 alt={i.name}
               />
               <h3>{i.name}</h3>
-              <h2>$125</h2> 
+              <h2>$125</h2>
             </div>
           </Link>
         ))}
