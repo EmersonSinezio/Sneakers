@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "../../styles/shoes.module.css";
-import ShoesRight from "../../components/shoesright";
+import ShoesRight from "../../components/ShoesRight";
 import Shoes from "../../components/Shoes";
 import { useRouter } from "next/router";
 
