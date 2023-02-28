@@ -27,12 +27,6 @@
 .left_container div {
   margin: auto;
 }
-.div_left {
-  animation: showL 2s;
-}
-.div_rigth {
-  animation: showR 2s;
-}
 
 .bottomImages {
   display: flex;
@@ -207,19 +201,4 @@
   color: white;
   border-radius: 5px;
   margin-top: 5vh;
-}
-
-@keyframes showL {
-  0% {
-    transform: translateX(-150px);
-  }
-  100% {
-  }
-}
-@keyframes showR {
-  0% {
-    transform: translateX(150px);
-  }
-  100% {
-  }
 }
