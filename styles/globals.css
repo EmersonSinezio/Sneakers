@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
-body{
-  background-color: #333333;
-  overflow-x: hidden ;
+body {
+  background-color: #ccc;
+  overflow-x: hidden;
 }
-.full{
+.full {
   background-color: #333;
   position: fixed;
   width: 100vw;

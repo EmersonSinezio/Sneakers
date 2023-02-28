@@ -1,8 +1,23 @@
-.About{
-    min-width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #e5e5e5;
+.About {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+.About h1 {
+  animation: pulse 2s;
+  border: 1px solid gray;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

@@ -1,34 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<img src="https://github.com/EmersonSinezio/Sneakers/blob/main/Readme/SneakersLogo.png"/>
 
-## Getting Started
+## Projeto Sneakers
 
-First, run the development server:
+Projeto inspirado em um e-comerce
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Links
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Site hospedado na Vercel: https://sneakers-dtm1t5w21-emersonsinezio.vercel.app/
+- Repositório: https://github.com/EmersonSinezio/Sneakers
+  - Em caso de bugs por favor entre em contato. Email: emerson.sineziio@gmail.com
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Tecs
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+As tecs utilizadas para realizar o projeto:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Next-js
+- Next-Link
+- Css-Modules
 
-## Learn More
+## Serviços usados:
 
-To learn more about Next.js, take a look at the following resources:
+- Github
+- Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Inicialização
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### 1 - Quando abrir o app será recebido com a Home page
 
-## Deploy on Vercel
+![Homepage image](https://github.com/EmersonSinezio/Sneakers/blob/main/Readme/Home%20page.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<hr/>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### 2 - Após clicar nos produtos, será redirecionado a tela do produto
+
+#### Podendo aumentar a quantidade do produto a ser comprado e adicionar ao carrinho, Clicando no produto pode vê-lo tanto a parte da frente quanto a de trás do produto
+
+![Cart](https://github.com/EmersonSinezio/Sneakers/blob/main/Readme/Product.png)
+
+<hr/>
+
+### 3 - O projeto contem uma carrinho na parte inferior da tela
+
+![AboutPage](https://github.com/EmersonSinezio/Sneakers/blob/main/Readme/Cart.png)
+
+<hr/>
+
+## Ideia do projeto
+
+A principal ideia do projeto é:
+
+- Escolher um produto de sua escolha
+- Comprar o item escolhido
+
+## Autor
+
+- **Emerson Mesquita Sinézio**
