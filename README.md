@@ -27,7 +27,7 @@ As tecs utilizadas para realizar o projeto:
 
 ### 1 - Quando abrir o app será recebido com a Home page
 
-![Homepage image](https://github.com/EmersonSinezio/Sneakers/blob/main/Readme/Home%20page.png)
+![Homepage image](https://github.com/EmersonSinezio/Sneakers/blob/main/Readme/Homepage.png)
 
 <hr/>
 
