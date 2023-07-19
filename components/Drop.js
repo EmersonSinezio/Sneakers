@@ -28,9 +28,6 @@ function Drop() {
               <Link href="/about" className={styles.link}>
                 <li>About</li>
               </Link>
-              <Link href="/contact" className={styles.link}>
-                <li>Contact</li>
-              </Link>
             </ul>
           </div>
         )}

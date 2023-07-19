@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Bebas+Neue&display=swap');
+/* font-family: 'Abel', sans-serif;
+font-family: 'Anton', sans-serif;
+font-family: 'Bebas Neue', sans-serif; */
+
 .Links {
   width: 80vw;
   height: 10vh;
-  background-color: rgb(187, 187, 187);
+  background-color: #FFA500;
   margin: 0 10vw;
   border: 1px solid #7f340f;
   display: flex;
@@ -13,35 +18,46 @@
   top: 0;
   left: 0;
 }
+
 .Links ul {
   display: flex;
   list-style: none;
   align-items: center;
 }
+
 .Links ul li {
   margin-left: 16px;
   font-family: "Inter";
   font-size: 14px;
   cursor: pointer;
 }
+
 .Links h1 {
   margin: auto 16px;
 }
+
 .link {
   text-decoration: none;
-  color: #000;
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: 'Abel', sans-serif
+
 }
+
 .link:hover {
   transition: 0.5s;
   color: #ff7735;
   cursor: pointer;
 }
+
 .link h1 {
-  color: #000;
+  color: #fff;
   font-family: "Inter";
-  font-size: 2rem;
+  font-size: 2.5rem;
   cursor: pointer;
+  font-family: 'Abel', sans-serif
 }
+
 .link h1:hover {
   color: #ff7735;
   transition: 0.5s;
@@ -49,6 +65,7 @@
 
 .link h1 span {
   color: #ff7735;
+  font-family: 'Abel', sans-serif
 }
 
 @media (max-width: 600px) {

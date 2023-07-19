@@ -31,17 +31,23 @@ As tecs utilizadas para realizar o projeto:
 
 <hr/>
 
-### 2 - Após clicar nos produtos, será redirecionado a tela do produto
+### 2 - Após clicar para visitar ou na aba coleções poderá ver alguns produtos do projeto
 
 #### Podendo aumentar a quantidade do produto a ser comprado e adicionar ao carrinho, Clicando no produto pode vê-lo tanto a parte da frente quanto a de trás do produto
 
-![Cart](https://github.com/EmersonSinezio/Sneakers/blob/main/Readme/Product.png)
+![Collection image](https://github.com/EmersonSinezio/Sneakers/blob/main/Readme/Colections.png)
 
 <hr/>
 
-### 3 - O projeto contem uma carrinho na parte inferior da tela
+### 3 - Ao clicar nos produtos poderá ver a página completa do produto
 
-![AboutPage](https://github.com/EmersonSinezio/Sneakers/blob/main/Readme/Cart.png)
+![Product image](https://github.com/EmersonSinezio/Sneakers/blob/main/Readme/Product.png)
+
+<hr/>
+
+### 4 - Na aba sobre tem um pouco falando sobre o website e os contatos
+
+![AboutPage](https://github.com/EmersonSinezio/Sneakers/blob/main/Readme/About.png)
 
 <hr/>
 

@@ -17,18 +17,13 @@ function Header() {
           <div>
             <ul className={styles.menu}>
               <li>
-                <Link href="/" className={styles.link}>
+                <Link href="/colections" className={styles.link}>
                   Coleções
                 </Link>
               </li>
               <li>
                 <Link href="/about" className={styles.link}>
                   Sobre
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className={styles.link}>
-                  Contato
                 </Link>
               </li>
             </ul>
