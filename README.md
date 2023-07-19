@@ -33,8 +33,6 @@ As tecs utilizadas para realizar o projeto:
 
 ### 2 - Após clicar para visitar ou na aba coleções poderá ver alguns produtos do projeto
 
-#### Podendo aumentar a quantidade do produto a ser comprado e adicionar ao carrinho, Clicando no produto pode vê-lo tanto a parte da frente quanto a de trás do produto
-
 ![Collection image](https://github.com/EmersonSinezio/Sneakers/blob/main/Readme/Colections.png)
 
 <hr/>
