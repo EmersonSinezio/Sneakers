@@ -19,18 +19,30 @@ function About() {
       </div>
       <div className={styles.footer}>
         <div>
-          <Link href="#" className={styles.button}>
+          <Link
+            href="https://github.com/EmersonSinezio/Sneakers"
+            className={styles.button}
+          >
             <button>Repositorio</button>
           </Link>
         </div>
         <div className={styles.icons_container}>
-          <Link href="#" className={styles.icon}>
+          <Link
+            href="https://github.com/EmersonSinezio"
+            className={styles.icon}
+          >
             <FiGithub id={styles.icon} />
           </Link>
-          <Link href="#" className={styles.icon}>
+          <Link
+            href="https://www.linkedin.com/in/emerson-sineziio"
+            className={styles.icon}
+          >
             <FiLinkedin id={styles.icon} />
           </Link>
-          <Link href="#" className={styles.icon}>
+          <Link
+            href="mailto:emerson.sineziio@gmail.com"
+            className={styles.icon}
+          >
             <AiOutlineMail id={styles.icon} />
           </Link>
         </div>

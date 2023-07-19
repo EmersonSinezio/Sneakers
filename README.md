@@ -6,7 +6,7 @@ Projeto inspirado em um e-comerce
 
 ## Links
 
-- Site hospedado na Vercel: https://sneakers-dtm1t5w21-emersonsinezio.vercel.app/
+- Site hospedado na Vercel: sneakers-opal-alpha.vercel.app
 - Repositório: https://github.com/EmersonSinezio/Sneakers
   - Em caso de bugs por favor entre em contato. Email: emerson.sineziio@gmail.com
 
