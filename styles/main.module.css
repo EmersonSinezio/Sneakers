@@ -19,17 +19,17 @@
     width: 35vw;
 }
 .image{
-    width: 693px;
-    height: 390px;
+    width: 50vw;
+    height: auto;
 }
 .description{
     width: 25vw;
     text-align: center;
-    height: 35vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 15vh;
 }
 .right_container{
     display: flex;
@@ -45,7 +45,6 @@
     color: #fff;
     border: 1px solid rgba(3, 3, 3, .3);
     box-shadow: 5px 5px 5px rgba(0,0,0,.25);
-    margin: 1rem 0;
     font-size: 1.2rem;
 }
 .btn:hover{
@@ -62,16 +61,41 @@
     font-family: 'Anton', sans-serif;
 }
 .description p{
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 1rem 0;
     color: #fff;
 }
-
+#description{
+    display: none;
+}
 @keyframes show{
     0%{
         opacity: 0;
     }
     100%{
         opacity: 1;
+    }
+}
+@media (max-width:800px) {
+    .image{
+        width: 45vw;
+        height: auto;
+    }
+    .description h3{
+        font-size: 2rem
+    }
+    .description p{
+        font-size: .9rem;
+        height: 19vh;
+        overflow-y: hidden;
+    }
+    .description{
+        width: 45vw;
+    }
+    .description p {
+        display: none;
+    }
+    #description{
+        display: flex;
     }
 }

@@ -17,6 +17,10 @@ function Main() {
               de corrida de alto desempenho até opções casuais e estilosas temos
               tudo o que você precisa para se movimentar com confiança.
             </p>
+            <p id={styles.description}>
+              Explore nossa ampla variedade de marcas renomadas e modelos
+              exclusivos que combinam desempenho conforto e estilo.
+            </p>
           </div>
           <Link href="/colections">
             <button className={styles.btn}>Visitar</button>
