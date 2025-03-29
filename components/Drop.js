@@ -1,36 +1,39 @@
-import styles from "../styles/dropdown.module.css";
+// components/Drop.js
+import { useState, useRef, useEffect } from "react";
 import { CgDetailsMore } from "react-icons/cg";
-import { useState } from "react";
 import Link from "next/link";
+import styles from "../styles/dropdown.module.css";
 
 function Drop() {
-  let [change, setChange] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  // Fechar dropdown ao clicar fora
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-    //DropDown Menu
-    <div className={styles.Container}>
-      <div className={styles.dropMenu}>
-        <div
-          className={styles.dropIcon}
-          onClick={() =>
-            change == false
-              ? setChange((change = true))
-              : setChange((change = false))
-          }
-        >
-          <CgDetailsMore size={35} className={styles.Icon} />
-        </div>
-        {change == false ? null : (
-          <div className={styles.ContainerDrop}>
-            <ul className={styles.drop}>
-              <Link href="/" className={styles.link}>
-                <li>Collections</li>
-              </Link>
-              <Link href="/about" className={styles.link}>
-                <li>About</li>
-              </Link>
-            </ul>
-          </div>
-        )}
+    <div className={styles.container} ref={dropdownRef}>
+      <button onClick={() => setIsOpen(!isOpen)} className={styles.button}>
+        <CgDetailsMore size={35} className={styles.icon} />
+      </button>
+
+      <div className={`${styles.menu} ${isOpen ? styles.menuOpen : ""}`}>
+        <Link href="/colections" className={styles.link}>
+          <span className={styles.menuItem}>Collections</span>
+        </Link>
+        <Link href="/about" className={styles.link}>
+          <span className={styles.menuItem}>About</span>
+        </Link>
+        {/* Adicione mais itens conforme necessário */}
       </div>
     </div>
   );

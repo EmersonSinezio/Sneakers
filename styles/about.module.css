@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Bebas+Neue&display=swap");
 
 .About {
   min-width: 100vw;
@@ -9,74 +9,83 @@
   align-items: center;
 }
 
-.footer{
+.footer {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100vw;
   height: 10vh;
-  background-color: #333333;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.icons_container{
+.icons_container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.icon{
+.icon {
   color: #fff;
   text-decoration: none;
-  margin: 0 .5rem;
+  margin: 0 0.5rem;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #FFA500;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #FF6F61;
+  border: 1px solid #ff6f61;
 }
-#icon{
+#icon {
   width: 30px;
   height: 30px;
 }
-.button button{
+.button button {
   color: #fff;
-  background-color:#FFA500 ;
-  padding: .5rem 1.5rem;
-  border: 1px solid #FF6F61;
-  border-radius: .5rem;
+  background-color: #ffa500;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #ff6f61;
+  border-radius: 0.5rem;
 }
-.button button:hover, .icon:hover{
-  transition: .5s;
+.button button:hover,
+.icon:hover {
+  transition: 0.5s;
   background-color: transparent;
   cursor: pointer;
-  border-color: #CA1A2C;
+  border-color: #ca1a2c;
 }
-.about_description{
-  width: 35vw;
+.about_description {
+  width: 45vw;
   text-align: center;
   animation: 1.2s show;
 }
-.about_description h1{
+.about_description h1 {
   font-size: 2.5rem;
   margin: 1rem 0;
   color: #facfcf;
   font-family: "Bebas neue'";
 }
-.about_description p{
+.about_description p {
   font-size: 1.3rem;
   color: #b6b6b6;
   font-family: "Abel";
 }
-
-@keyframes show{
-  0%{
+@media (max-width: 800px) {
+  .about_description {
+    width: 80vw;
+  }
+  .about_description h1 {
+    font-size: 1.5rem;
+  }
+  .about_description p {
+    font-size: 1rem;
+  }
+}
+@keyframes show {
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }

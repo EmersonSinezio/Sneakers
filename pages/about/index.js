@@ -18,14 +18,6 @@ function About() {
         </p>
       </div>
       <div className={styles.footer}>
-        <div>
-          <Link
-            href="https://github.com/EmersonSinezio/Sneakers"
-            className={styles.button}
-          >
-            <button>Repositorio</button>
-          </Link>
-        </div>
         <div className={styles.icons_container}>
           <Link
             href="https://github.com/EmersonSinezio"

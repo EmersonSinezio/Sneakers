@@ -5,7 +5,7 @@ function Main() {
   return (
     <div className={styles.container}>
       <div className={styles.left}>
-        <img src="/assets/JORDAN.jpg" className={styles.image} />
+        <img src="/assets/JORDAN.png" className={styles.image} />
       </div>
       <div className={styles.right}>
         <div className={styles.right_container}>

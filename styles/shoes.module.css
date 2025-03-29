@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Bebas+Neue&display=swap");
 .containerShoes {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100vw;
   height: 100vh;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .div_left,
@@ -13,7 +13,7 @@
   width: 45vw;
   height: 86vh;
   margin: 10vh 5vw 0 5vw;
-  background-color: #FFA500;
+  background-color: #ffa500;
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
@@ -40,7 +40,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid #FF6F61;
+  border-top: 1px solid #ff6f61;
 }
 
 .fullImage {
@@ -49,20 +49,20 @@
 }
 
 .previewImages {
-  border: 1px solid #FF6F61;
+  border: 1px solid #ff6f61;
   margin: 3vw 8px;
   width: 12vw;
   height: 16vh;
   border-radius: 5px;
   cursor: pointer;
 }
-.previewImages:hover{
-  border-color: #CA1A2C;
-  transition: .5s;
+.previewImages:hover {
+  border-color: #ca1a2c;
+  transition: 0.5s;
 }
 /* Rigth */
 .company {
-  color: #CA1A2C;
+  color: #ca1a2c;
   margin: 4vh 0;
   font-family: "Anton";
 }
@@ -74,7 +74,7 @@
 }
 
 .container_Rigth span {
-  color: #CA1A2C;
+  color: #ca1a2c;
   font-family: "Abel";
 }
 
@@ -85,13 +85,13 @@
   width: 25vw;
   margin: auto;
   text-align: center;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 .description {
   text-align: center;
 }
 .price {
-  margin: 5vh 4vw;
+  margin: 0rem 4vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,7 +103,8 @@
   border-radius: 3px;
   font-size: 0.9rem;
   color: #e5e5e5;
-  margin: .5rem;
+  font: bold;
+  margin: 0.5rem;
 }
 .price p {
   font-size: 1.4rem;
@@ -112,13 +113,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 #defaultPrice {
   text-decoration: line-through;
-  color: #FF6F61;
-  margin-bottom: 1rem;
+  color: #ff6f61;
+  margin-bottom: 0.5rem;
 }
 .buttonsContainer,
 .buttonsDiv {
@@ -151,11 +151,14 @@
   border: 1px solid #ff7735;
   color: white;
 }
-.addCart button:hover{
-  border-color:#993e12;
+.addCart button:hover {
+  border-color: #993e12;
   background-color: transparent;
-  transition: .5s;
-  cursor: pointer;	
+  transition: 0.5s;
+  cursor: pointer;
+}
+#addCart {
+  display: none;
 }
 /* Divs [Left rigth] */
 @media (max-width: 700px) {
@@ -163,15 +166,33 @@
     display: flex;
     flex-direction: column;
     margin-top: 5vh;
+    overflow: auto;
+  }
+  .addCart #addCart {
+    height: 50px;
+    width: 200px;
+    margin: 0 auto 2vh;
+    background-color: #ff7735;
+    border: 1px solid #ff7735;
+    color: white;
+    display: block;
+  }
+  .addCart #addCart:hover {
+    border-color: #993e12;
+    background-color: transparent;
+    transition: 0.5s;
+    cursor: pointer;
   }
   .div_left,
   .div_rigth {
     width: 90vw;
     height: 100vh;
   }
+  .div_rigth {
+    display: none;
+  }
   .fullImage {
     width: 80vw;
-    height: 60vh;
   }
   .previewImages {
     width: 25vw;
@@ -182,6 +203,21 @@
   .buttonsDiv button,
   #result {
     width: 10vw;
+  }
+}
+@media (max-width: 1024px) {
+  .container_Rigth h1 {
+    font-size: 1rem;
+    margin: 2vh auto;
+    width: 100%;
+    text-align: center;
+  }
+  .container_Rigth p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  #info {
+    width: 90%;
   }
 }
 /* CART */

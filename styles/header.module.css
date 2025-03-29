@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Bebas+Neue&display=swap");
 /* font-family: 'Abel', sans-serif;
 font-family: 'Anton', sans-serif;
 font-family: 'Bebas Neue', sans-serif; */
 
 .Links {
-  width: 80vw;
+  width: 50vw;
   height: 10vh;
-  background-color: #FFA500;
-  margin: 0 10vw;
-  border: 1px solid #7f340f;
+  margin: 0 auto;
+  border-bottom: 1px solid #7f340f;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -16,7 +15,8 @@ font-family: 'Bebas Neue', sans-serif; */
   position: fixed;
   border-radius: 5px;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .Links ul {
@@ -40,8 +40,7 @@ font-family: 'Bebas Neue', sans-serif; */
   text-decoration: none;
   color: #fff;
   font-size: 1.2rem;
-  font-family: 'Abel', sans-serif
-
+  font-family: "Abel", sans-serif;
 }
 
 .link:hover {
@@ -55,7 +54,7 @@ font-family: 'Bebas Neue', sans-serif; */
   font-family: "Inter";
   font-size: 2.5rem;
   cursor: pointer;
-  font-family: 'Abel', sans-serif
+  font-family: "Abel", sans-serif;
 }
 
 .link h1:hover {
@@ -65,11 +64,14 @@ font-family: 'Bebas Neue', sans-serif; */
 
 .link h1 span {
   color: #ff7735;
-  font-family: 'Abel', sans-serif
+  font-family: "Abel", sans-serif;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .menu li {
     display: none;
+  }
+  .Links {
+    width: 100vw;
   }
 }

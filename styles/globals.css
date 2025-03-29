@@ -8,6 +8,6 @@
 }
 
 body {
-  background-color: #CA1A2C;
+  background: linear-gradient(to right, #111, rgba(61, 12, 2, 1), #111);
   overflow-x: hidden;
 }
