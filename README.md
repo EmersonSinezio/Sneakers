@@ -1,61 +1,84 @@
-<img src="https://github.com/EmersonSinezio/Sneakers/blob/main/Readme/SneakersLogo.png"/>
+# 🚀 Sneakers
 
-## Projeto Sneakers
+<img src="Readme/SneakersLogo.png" width="300" alt="Sneakers Logo"/>
 
-Projeto inspirado em um e-comerce
+---
 
-## Links
+[![Vercel Deployment](https://img.shields.io/badge/Deployed_on-Vercel-black?style=for-the-badge&logo=vercel)](https://sneakers-opal-alpha.vercel.app)
 
-- Site hospedado na Vercel: https://sneakers-opal-alpha.vercel.app
-- Repositório: https://github.com/EmersonSinezio/Sneakers
-  - Em caso de bugs por favor entre em contato. Email: emerson.sineziio@gmail.com
+A complete e-commerce solution rebuilt with modern development practices, showcasing my evolution as a developer.
 
-## Tecs
+## 🌟 What's New?
 
-As tecs utilizadas para realizar o projeto:
+This refactored version includes:
 
-- Next-js
-- Next-Link
-- Css-Modules
+- Modern React patterns and architecture
+- Enhanced performance optimization
+- Improved responsive design
+- Better state management
+- Accessibility improvements
+- Code quality enhancements
 
-## Serviços usados:
+## 🔑 Key Features
 
-- Github
-- Vercel
+- Product catalog with dynamic filtering
+- Product detail pages with gallery
+- Responsive mobile-first design
+- Interactive shopping experience
+- Contact and about sections
+- Modern UI/UX best practices
 
-## Inicialização
+## 🛠 Technologies Used
 
-### 1 - Quando abrir o app será recebido com a Home page
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript)
+![CSS Modules](https://img.shields.io/badge/CSS_Modules-000000?style=for-the-badge&logo=css3)
 
-![Homepage image](https://github.com/EmersonSinezio/Sneakers/blob/main/Readme/Homepage.png)
+**Services Integration:**
 
-<hr/>
+- Vercel Hosting
+- GitHub Actions (CI/CD)
+- Responsive Design Tools
 
-### 2 - Após clicar para visitar ou na aba coleções poderá ver alguns produtos do projeto
+## 🚀 Getting Started
 
-![Collection image](https://github.com/EmersonSinezio/Sneakers/blob/main/Readme/Colections.png)
+### Prerequisites
 
-<hr/>
+- Node.js ≥16.x
+- npm/yarn
 
-### 3 - Ao clicar nos produtos poderá ver a página completa do produto
+### Installation
 
-![Product image](https://github.com/EmersonSinezio/Sneakers/blob/main/Readme/Product.png)
+```bash
+git clone https://github.com/EmersonSinezio/Sneakers.git
+cd Sneakers
+npm install
+npm run dev
+```
 
-<hr/>
+<br>
 
-### 4 - Na aba sobre tem um pouco falando sobre o website e os contatos
+# 🖥️ Application Flow
 
-![AboutPage](https://github.com/EmersonSinezio/Sneakers/blob/main/Readme/About.png)
+## <details> <summary>🏠 Home Page</summary> <img src="Readme/Homepage.png" alt="Home Page Preview"> </details> <details> <summary>👟 Product Collection</summary> <img src="Readme/Colections.png" alt="Collections Preview"> </details> <details> <summary>📦 Product Details</summary> <img src="Readme/Product.png" alt="Product Page Preview"> </details>
 
-<hr/>
+<br>
 
-## Ideia do projeto
+## 🌍 Live Deployment
 
-A principal ideia do projeto é:
+[![Vercel Deployment](https://img.shields.io/badge/Visit_Site-000000?style=for-the-badge&logo=vercel)](https://sneakers-opal-alpha.vercel.app)
 
-- Escolher um produto de sua escolha
-- Comprar o item escolhido
+## 🤝 Contributing
 
-## Autor
+Contributions are welcome! Please follow our [contribution guidelines](CONTRIBUTING.md).
 
-- **Emerson Mesquita Sinézio**
+## 📄 License
+
+This project is licensed under the MIT License - see [LICENSE.md](LICENSE.md) for details.
+
+## 👨💻 Author
+
+**Emerson Mesquita Sinézio**  
+[![Email](https://img.shields.io/badge/Contact-Email-blue?style=flat-square)](mailto:emerson.sineziio@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/Connect-LinkedIn-blue?style=flat-square)](https://www.linkedin.com/in/your-profile)
