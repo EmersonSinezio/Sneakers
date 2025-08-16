@@ -1,84 +1,36 @@
-# 🚀 Sneakers
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-<img src="Readme/SneakersLogo.png" width="300" alt="Sneakers Logo"/>
+## Getting Started
 
----
-
-[![Vercel Deployment](https://img.shields.io/badge/Deployed_on-Vercel-black?style=for-the-badge&logo=vercel)](https://sneakers-opal-alpha.vercel.app)
-
-A complete e-commerce solution rebuilt with modern development practices, showcasing my evolution as a developer.
-
-## 🌟 What's New?
-
-This refactored version includes:
-
-- Modern React patterns and architecture
-- Enhanced performance optimization
-- Improved responsive design
-- Better state management
-- Accessibility improvements
-- Code quality enhancements
-
-## 🔑 Key Features
-
-- Product catalog with dynamic filtering
-- Product detail pages with gallery
-- Responsive mobile-first design
-- Interactive shopping experience
-- Contact and about sections
-- Modern UI/UX best practices
-
-## 🛠 Technologies Used
-
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs)
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript)
-![CSS Modules](https://img.shields.io/badge/CSS_Modules-000000?style=for-the-badge&logo=css3)
-
-**Services Integration:**
-
-- Vercel Hosting
-- GitHub Actions (CI/CD)
-- Responsive Design Tools
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js ≥16.x
-- npm/yarn
-
-### Installation
+First, run the development server:
 
 ```bash
-git clone https://github.com/EmersonSinezio/Sneakers.git
-cd Sneakers
-npm install
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-<br>
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-# 🖥️ Application Flow
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## <details> <summary>🏠 Home Page</summary> <img src="Readme/Homepage.png" alt="Home Page Preview"> </details> <details> <summary>👟 Product Collection</summary> <img src="Readme/Colections.png" alt="Collections Preview"> </details> <details> <summary>📦 Product Details</summary> <img src="Readme/Product.png" alt="Product Page Preview"> </details>
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-<br>
+## Learn More
 
-## 🌍 Live Deployment
+To learn more about Next.js, take a look at the following resources:
 
-[![Vercel Deployment](https://img.shields.io/badge/Visit_Site-000000?style=for-the-badge&logo=vercel)](https://sneakers-opal-alpha.vercel.app)
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## 🤝 Contributing
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-Contributions are welcome! Please follow our [contribution guidelines](CONTRIBUTING.md).
+## Deploy on Vercel
 
-## 📄 License
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-This project is licensed under the MIT License - see [LICENSE.md](LICENSE.md) for details.
-
-## 👨💻 Author
-
-**Emerson Mesquita Sinézio**  
-[![Email](https://img.shields.io/badge/Contact-Email-blue?style=flat-square)](mailto:emerson.sineziio@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/Connect-LinkedIn-blue?style=flat-square)](https://www.linkedin.com/in/your-profile)
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
