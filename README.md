@@ -1,5 +1,7 @@
 # 👟 Sneakers - E-commerce Premium
 
+<img src="./readme/home.jpg" alt="Home" width="500px">
+
 [![Next.js](https://img.shields.io/badge/Next.js-15.0.0-000000?logo=next.js)](https://nextjs.org/) [![TypeScript](https://img.shields.io/badge/TypeScript-5.0.0-3178C6?logo=typescript)](https://www.typescriptlang.org/) [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.0-06B6D4?logo=tailwindcss)](https://tailwindcss.com/) [![Zustand](https://img.shields.io/badge/Zustand-State_Management-764ABC?logo=react)](https://github.com/pmndrs/zustand)
 
 Uma aplicação web moderna e responsiva de e-commerce focada em sneakers exclusivos, desenvolvida com **Next.js 15 (App Router) + TypeScript** e estilizada com **Tailwind CSS**.

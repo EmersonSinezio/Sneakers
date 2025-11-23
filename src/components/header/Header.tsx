@@ -12,7 +12,7 @@ export default function Header() {
         <header className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-30 border-b border-gray-100">
             <div className="container mx-auto px-4 h-16 flex justify-between items-center">
                 <Link href="/" className="font-black text-2xl tracking-tighter text-gray-900">
-                    SNEAKERS<span className="text-primary">.</span>
+                    SNEA<span className="text-[#dc2626]">KERS</span> <span className="text-primary">.</span>
                 </Link>
                 <nav className="hidden md:flex space-x-8 font-medium text-gray-600">
                     <Link href="/product" className="hover:text-primary transition-colors">Lançamentos</Link>
