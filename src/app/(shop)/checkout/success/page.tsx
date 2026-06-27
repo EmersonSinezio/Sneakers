@@ -20,6 +20,7 @@ export default function CheckoutSuccessPage() {
     const stored = sessionStorage.getItem("sneakers:last-order");
     if (stored) {
       try {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setOrder(JSON.parse(stored));
       } catch {
         // ignore

@@ -39,6 +39,7 @@ export default function HeroParallax() {
   const badgeY = useSpring(rawY, { stiffness: 200, damping: 16, mass: 0.5 });
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMounted(true);
     const handleMouseMove = (e: MouseEvent) => {
       if (!containerRef.current) return;

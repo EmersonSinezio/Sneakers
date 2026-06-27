@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import { motion, useScroll, useTransform, useInView, MotionValue } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -199,7 +199,7 @@ function LayerCard({ layer, index }: { layer: Layer; index: number }) {
   );
 }
 
-function SneakerExploded({ scrollProgress }: { scrollProgress: any }) {
+function SneakerExploded({ scrollProgress }: { scrollProgress: MotionValue<number> }) {
   // Configuração das distâncias do Parallax ajustadas para não vazarem da tela
   const upperY = useTransform(scrollProgress, [0, 1], [0, -140]);
   const airY = useTransform(scrollProgress, [0, 1], [0, -30]);

@@ -19,7 +19,6 @@ import {
 } from "lucide-react";
 import { useCartStore } from "@/lib/store";
 import { formatPrice, generateOrderId } from "@/lib/utils";
-import { BUSINESS_RULES } from "@/lib/constants";
 import { ShippingAddress, PaymentMethod } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
@@ -407,7 +406,7 @@ export default function CheckoutPage() {
                                 key={i}
                                 className={cn(
                                   "rounded-sm",
-                                  Math.random() > 0.5 ? "bg-ink" : "bg-white"
+                                  ((i * 17 + i * i * 3 + 13) % 2 === 0) ? "bg-ink" : "bg-white"
                                 )}
                               />
                             ))}
