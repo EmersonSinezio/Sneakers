@@ -219,19 +219,19 @@ function SneakerExploded({ scrollProgress }: { scrollProgress: any }) {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,35,60,0.03)_0%,transparent_70%)]" />
 
       {/* 2. Ajustamos o top de cada imagem de forma proporcional para encaixarem perfeitamente */}
-      <motion.div style={{ y: upperY, opacity: upperOp }} className="absolute w-full z-40" style={{ top: "-35%" }}>
+      <motion.div style={{ y: upperY, opacity: upperOp, top: "-35%" }} className="absolute w-full z-40">
         <TechLayer id="upper" color="#EF233C" label="Cabedal" />
       </motion.div>
 
-      <motion.div style={{ y: airY, opacity: airOp }} className="absolute w-full z-50" style={{ top: "20%" }}>
+      <motion.div style={{ y: airY, opacity: airOp, top: "20%" }} className="absolute w-full z-50">
         <TechLayer id="air" color="#D4FF00" label="Zoom Air" />
       </motion.div>
 
-      <motion.div style={{ y: midsoleY, opacity: midOp }} className="absolute w-full z-30" style={{ top: "65%" }}>
+      <motion.div style={{ y: midsoleY, opacity: midOp, top: "65%" }} className="absolute w-full z-30">
         <TechLayer id="midsole" color="#F5F5F7" label="React" />
       </motion.div>
 
-      <motion.div style={{ y: soleY, opacity: soleOp }} className="absolute w-full z-20" style={{ top: "110%" }}>
+      <motion.div style={{ y: soleY, opacity: soleOp, top: "110%" }} className="absolute w-full z-20">
         <TechLayer id="sole" color="#0B0B0F" label="Solado" />
       </motion.div>
 
