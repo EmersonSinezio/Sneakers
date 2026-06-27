@@ -1,72 +1,163 @@
-import { Metadata } from 'next';
-import Image from 'next/image';
-import { notFound } from 'next/navigation';
-import AddToCartButton from '@/components/shop/AddToCartButton';
-import { PRODUCTS } from '@/data/products';
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { PRODUCTS } from "@/data/products";
+import { formatPrice } from "@/lib/utils";
+import ProductPageClient from "./ProductPageClient";
 
-// Gera os parâmetros estáticos para todas as páginas de produtos
+/**
+ * Generate static params for all product pages at build time.
+ */
 export async function generateStaticParams() {
-    return PRODUCTS.map((product) => ({
-        id: product.id,
-    }));
+  return PRODUCTS.map((product) => ({ id: product.id }));
 }
 
-// SEO Dinâmico
-export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
-    const { id } = await params;
-    const product = PRODUCTS.find((p) => p.id === id);
+/**
+ * Dynamic SEO metadata per product.
+ */
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const product = PRODUCTS.find((p) => p.id === id);
 
-    if (!product) {
-        return {
-            title: 'Produto não encontrado',
-        };
-    }
+  if (!product) {
+    return { title: "Produto não encontrado" };
+  }
 
-    return {
-        title: `${product.name} | Sneakers`,
-        description: product.description,
-    };
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
+  return {
+    title: product.name,
+    description: product.description,
+    keywords: [
+      product.name,
+      product.category,
+      product.brand ?? "sneaker",
+      "tênis",
+      "performance",
+    ],
+    openGraph: {
+      title: `${product.name} — ${formatPrice(product.price)}`,
+      description: product.description,
+      images: [
+        {
+          url: product.images[0],
+          width: 1200,
+          height: 1200,
+          alt: product.name,
+        },
+      ],
+      type: "website",
+      url: `${baseUrl}/product/${product.id}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: product.name,
+      description: `${formatPrice(product.price)} — ${product.category}`,
+      images: [product.images[0]],
+    },
+    alternates: {
+      canonical: `/product/${product.id}`,
+    },
+  };
 }
 
-export default async function ProductPage({ params }: { params: Promise<{ id: string }> }) {
-    const { id } = await params;
-    const product = PRODUCTS.find((p) => p.id === id);
+/**
+ * Product Detail Page — Server Component that fetches product
+ * and delegates interactive UI to a Client Component.
+ *
+ * Includes JSON-LD structured data for SEO.
+ */
+export default async function ProductPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const product = PRODUCTS.find((p) => p.id === id);
 
-    if (!product) {
-        notFound();
-    }
+  if (!product) {
+    notFound();
+  }
 
-    return (
-        <main className="container mx-auto px-4 py-12 min-h-screen flex flex-col md:flex-row gap-12 items-center">
-            <div className="flex-1 relative w-full h-[400px] md:h-[600px] bg-gray-100 rounded-3xl overflow-hidden">
-                {/* Next/Image Otimizado */}
-                <Image
-                    src={product.images[0]}
-                    alt={product.name}
-                    fill
-                    className="object-contain p-8 hover:scale-105 transition-transform duration-500"
-                    priority
-                />
-            </div>
+  // JSON-LD structured data for SEO
+  const productJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    image: product.images,
+    description: product.description,
+    sku: product.id,
+    brand: {
+      "@type": "Brand",
+      name: product.brand ?? "Nike",
+    },
+    offers: {
+      "@type": "Offer",
+      url: `/product/${product.id}`,
+      priceCurrency: "BRL",
+      price: product.price,
+      availability:
+        product.stock > 0
+          ? "https://schema.org/InStock"
+          : "https://schema.org/OutOfStock",
+      itemCondition: "https://schema.org/NewCondition",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: product.rating,
+      reviewCount: product.reviewsCount,
+      bestRating: 5,
+      worstRating: 1,
+    },
+  };
 
-            <div className="flex-1 space-y-6">
-                <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold">
-                    {product.category}
-                </span>
-                <h1 className="text-4xl md:text-6xl font-black text-gray-900 leading-tight">
-                    {product.name}
-                </h1>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                    {product.description}
-                </p>
-                <div className="text-3xl font-bold text-primary">
-                    R$ {product.price.toFixed(2)}
-                </div>
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Coleção",
+        item: "/product",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: product.category,
+        item: `/product?category=${product.category}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: product.name,
+        item: `/product/${product.id}`,
+      },
+    ],
+  };
 
-                <div className="flex gap-4 pt-4">
-                    <AddToCartButton product={product} />
-                </div>
-            </div>
-        </main>
-    );
+  return (
+    <>
+      {/* JSON-LD scripts for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
+      <ProductPageClient product={product} />
+    </>
+  );
 }

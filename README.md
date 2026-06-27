@@ -1,171 +1,314 @@
-# 👟 Sneakers - E-commerce Premium
+# 👟 Sneakers — Performance Edition
 
-<img src="./readme/home.jpg" alt="Home" width="500px">
+> Um e-commerce premium de sneakers com experiência cinematográfica, construído com **Next.js 16 + TypeScript + Three.js + Framer Motion**.
 
-[![Next.js](https://img.shields.io/badge/Next.js-15.0.0-000000?logo=next.js)](https://nextjs.org/) [![TypeScript](https://img.shields.io/badge/TypeScript-5.0.0-3178C6?logo=typescript)](https://www.typescriptlang.org/) [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.0-06B6D4?logo=tailwindcss)](https://tailwindcss.com/) [![Zustand](https://img.shields.io/badge/Zustand-State_Management-764ABC?logo=react)](https://github.com/pmndrs/zustand)
-
-Uma aplicação web moderna e responsiva de e-commerce focada em sneakers exclusivos, desenvolvida com **Next.js 15 (App Router) + TypeScript** e estilizada com **Tailwind CSS**.
-
-> 🎓 **Nota:** Este projeto foi totalmente refeito utilizando práticas de desenvolvimento mais atuais, aplicando conhecimentos modernos de arquitetura frontend, performance e UX.
-
-## ✨ Funcionalidades do Projeto
-
-* **🛒 Carrinho de Compras Global:** Gerenciamento de estado robusto com **Zustand**, persistindo itens e calculando totais em tempo real.
-* **🎨 Design Premium:** Interface limpa e moderna com animações suaves usando **Framer Motion**.
-* **📱 Totalmente Responsivo:** Layout adaptável para desktop, tablet e mobile.
-* **⚡ Next.js App Router:** Roteamento moderno e otimizado com Server Components.
-* **🔔 Notificações Toast:** Feedback visual elegante usando **Sonner** para ações como adicionar ao carrinho e finalizar compra.
-* **🔍 Páginas Dinâmicas de Produto:** Rotas dinâmicas (`[id]`) para exibição detalhada de cada sneaker.
-* **🛍️ Cart Drawer:** Gaveta lateral de carrinho com animações de entrada e saída.
+![Next.js](https://img.shields.io/badge/Next.js-16-000?logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript)
+![Three.js](https://img.shields.io/badge/Three.js-R3F-000?logo=three.js)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-FF0055?logo=framer)
+![Tailwind](https://img.shields.io/badge/Tailwind-3.4-06B6D4?logo=tailwindcss)
+![Zustand](https://img.shields.io/badge/Zustand-5-453f39)
 
 ---
 
-## 🛠 Tecnologias e Conceitos Aplicados
+## 🎯 Sobre o Projeto
 
-| Tecnologia | Descrição |
-| :--- | :--- |
-| **Next.js 15** | Framework React para produção com Server Components e App Router. |
-| **TypeScript** | Superset do JavaScript que adiciona tipagem estática ao código. |
-| **Tailwind CSS** | Framework CSS utility-first para estilização rápida e consistente. |
-| **Zustand** | Gerenciamento de estado global leve e performático. |
-| **Framer Motion** | Biblioteca de animações declarativas para React. |
-| **Lucide React** | Biblioteca de ícones SVG modernos e customizáveis. |
-| **Sonner** | Sistema de notificações toast elegante. |
+O **Sneakers — Performance Edition** é uma experiência de e-commerce completa, desenvolvida para demonstrar domínio de tecnologias modernas de frontend, UX premium e arquitetura escalável. O projeto combina:
+
+- **3 fatores "UAU"** na home: parallax com mouse, modelo 3D interativo e scroll storytelling
+- **Fluxo de compra completo**: catálogo → carrinho → checkout → sucesso (com confetti 🎊)
+- **SEO profissional**: JSON-LD, OG images dinâmicas, sitemap, robots.txt
+- **Design system coeso**: paleta "sport performance", tipografia Anton + Inter, animações customizadas
+
+> 💡 **Nota**: Este é um projeto de portfólio demonstrativo. Marcas como Nike, Jordan e Adidas pertencem aos seus respectivos proprietários.
 
 ---
 
-## 🔧 Pré-requisitos
+## ✨ Features Principais
 
-Antes de começar, certifique-se de ter instalado em sua máquina:
+### 🎨 Design & Experiência
+- **Hero cinematográfico** full-viewport com parallax multi-camada controlado por mouse
+- **Modelo 3D interativo** (Three.js + React Three Fiber) com fallback procedural
+- **Scroll Storytelling** — camadas do tênis se separam ao rolar (sola → palmilha → Zoom Air → cabedal)
+- **Estética Sport Performance** — paleta vermelho #EF233C + volt #D4FF00 + ink #0B0B0F
+- **Tipografia atlética** — Anton (display) + Inter (body) + Geist Mono (preços)
 
-* **Node.js 18+** (recomendado: versão LTS)
-* **npm** ou **yarn**
-* **Git**
+### 🛒 E-commerce
+- **12 produtos** com dados ricos: rating, reviews, specs técnicas, tamanhos, tecnologias
+- **Filtros avançados** por categoria, preço e tamanho com chips animados
+- **Quick View modal** — visualize e adicione ao carrinho sem sair da página
+- **Wishlist persistente** em localStorage
+- **Carrinho** com controles +/-, cupom de desconto (`BEMVINDO10`), barra de progresso de frete grátis
+- **Checkout de 2 etapas**: endereço (validado com Zod) + pagamento (crédito/Pix mock)
+- **Tela de sucesso** com confetti e número de pedido único (`SNK-2026-XXXXX`)
+
+### 🔍 PDP Imersivo (Product Detail Page)
+- **Galeria de imagens** com thumbnails + zoom on hover + lightbox fullscreen
+- **Seletor de tamanho** com estados visual (disponível/selecionado/esgotado)
+- **Abas**: Descrição, Especificações, Avaliações (com distribuição), Entrega
+- **Produtos relacionados** em carousel horizontal
+- **Sticky Buy Bar** no mobile
+- **Breadcrumbs** animados
+
+### ⚡ Performance & SEO
+- **Server Components** em rotas não-interativas
+- **JSON-LD** (Product + BreadcrumbList) em cada PDP
+- **OG images dinâmicas** via `/api/og` (Edge Runtime)
+- **Sitemap.xml** e **robots.txt** gerados dinamicamente
+- **Loading states** (skeletons) em todas as rotas
+- **Error boundaries** com retry UI
+- **404 estilizado** com animações on-brand
+- **Security headers** (X-Frame-Options, CSP, etc.)
+
+### 📱 Responsividade
+- Mobile-first, testado em 375px, 768px, 1024px, 1440px
+- Menu mobile slide-in
+- Filtros em drawer (mobile) / sidebar (desktop)
+- Sticky Buy Bar exclusiva mobile
+
+---
+
+## 🛠 Tech Stack
+
+| Camada | Tecnologia |
+|---|---|
+| **Framework** | Next.js 16 (App Router, Turbopack, Server Components) |
+| **Linguagem** | TypeScript 5 (strict) |
+| **Estilização** | Tailwind CSS 3.4 |
+| **Animações** | Framer Motion 12 (useScroll, useTransform, AnimatePresence) |
+| **3D** | Three.js + @react-three/fiber + @react-three/drei |
+| **State** | Zustand 5 (com persist middleware) |
+| **Forms** | react-hook-form + zod + @hookform/resolvers |
+| **Ícones** | Lucide React |
+| **Toasts** | Sonner |
+| **Confetti** | canvas-confetti |
+| **Utilities** | clsx + tailwind-merge |
 
 ---
 
 ## 🚀 Como Executar
 
-1. **Clone o repositório:**
+### Pré-requisitos
+- **Node.js 18+** (recomendado: 20 LTS)
+- **npm 9+**
 
-   ```bash
-   git clone https://github.com/seu-usuario/Sneakers.git
-   cd Sneakers
-   ```
+### Instalação
 
-2. **Instale as dependências:**
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/sneakers.git
+cd sneakers
 
-   ```bash
-   npm install
-   ```
+# Instale dependências
+npm install
 
-3. **Execute o servidor de desenvolvimento:**
+# Inicie o servidor de desenvolvimento
+npm run dev
+```
 
-   ```bash
-   npm run dev
-   ```
+Acesse **http://localhost:3000** no navegador.
 
-4. **Acesse no navegador:**
-
-   Abra [http://localhost:3000](http://localhost:3000) para visualizar a aplicação.
-
----
-
-## 📦 Scripts Disponíveis
+### Scripts disponíveis
 
 | Comando | Descrição |
-| :--- | :--- |
-| `npm run dev` | Inicia o servidor de desenvolvimento com Turbopack |
-| `npm run build` | Compila o projeto para produção |
-| `npm run start` | Inicia o servidor de produção |
-| `npm run lint` | Executa o ESLint para verificar problemas no código |
+|---|---|
+| `npm run dev` | Dev server com Turbopack (HMR rápido) |
+| `npm run build` | Compilação de produção (TypeScript + otimizações) |
+| `npm run start` | Serve a build de produção |
+| `npm run lint` | ESLint |
+
+### Teste o cupom
+No carrinho, digite **`BEMVINDO10`** para 10% de desconto.
 
 ---
 
-## 🧱 Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
 ```
-src/
-├── app/                 # Next.js App Router
-│   ├── (shop)/          # Grupo de rotas da loja
-│   │   ├── product/     # Rotas de produtos
-│   │   │   └── [id]/    # Rota dinâmica de detalhes do produto
-│   │   └── page.tsx     # Página Inicial
-│   ├── layout.tsx       # Layout Raiz (Root Layout)
-│   └── globals.css      # Estilos globais
-├── components/          # Componentes reutilizáveis
-│   ├── header/          # Header e Navegação
-│   ├── layout/          # Componentes estruturais (CartDrawer)
-│   └── shop/            # Componentes da loja (ProductCard, Hero)
-├── data/                # Dados estáticos (products.ts)
-├── lib/                 # Utilitários e Configurações
-│   ├── store.ts         # Store do Zustand (Carrinho)
-│   └── types.ts         # Definições de Tipos TypeScript
-└── ...
+sneakers/
+├── specs/                          # 📋 Documentação SDD (PRD + Spec + ADRs)
+│   ├── PRD.md
+│   ├── technical-spec.md
+│   ├── decisions.md
+│   └── README.md
+├── public/
+│   ├── models/                     # Modelo 3D .glb (opcional)
+│   ├── shoe_icon.png
+│   └── ...
+└── src/
+    ├── app/                        # Next.js App Router
+    │   ├── layout.tsx              # Root layout (fonts, metadata, Toaster)
+    │   ├── not-found.tsx           # 404 customizado
+    │   ├── sitemap.ts              # Sitemap dinâmico
+    │   ├── robots.ts               # robots.txt
+    │   ├── api/og/route.tsx        # OG image generator (Edge)
+    │   └── (shop)/                 # Route group
+    │       ├── layout.tsx          # Header + Footer + CartDrawer
+    │       ├── page.tsx            # 🏠 Home (orquestra 8 seções)
+    │       ├── loading.tsx         # Skeleton da home
+    │       ├── error.tsx           # Error boundary
+    │       ├── product/
+    │       │   ├── page.tsx        # 📦 Listing (filtros + sort + quickview)
+    │       │   ├── loading.tsx
+    │       │   └── [id]/
+    │       │       ├── page.tsx    # 🎯 PDP (Server Component + JSON-LD)
+    │       │       ├── ProductPageClient.tsx
+    │       │       └── loading.tsx
+    │       ├── wishlist/page.tsx   # ❤️ Favoritos
+    │       └── checkout/
+    │           ├── page.tsx        # 💳 Checkout (2 steps + zod)
+    │           └── success/page.tsx # 🎉 Confetti + order ID
+    ├── components/
+    │   ├── ui/                     # Design System (Button, Badge, Skeleton, ...)
+    │   ├── header/Header.tsx       # Nav com wishlist + cart badges
+    │   ├── layout/
+    │   │   ├── CartDrawer.tsx      # Carrinho lateral
+    │   │   └── Footer.tsx          # 5 colunas + pagamentos
+    │   ├── shop/                   # Home + Listing
+    │   │   ├── Hero.tsx            # 🎬 Hero cinematográfico
+    │   │   ├── HeroParallax.tsx    # Mouse-move parallax
+    │   │   ├── Sneaker3D.tsx       # 🧊 Three.js com fallback
+    │   │   ├── Sneaker3DScene.tsx
+    │   │   ├── ScrollStorytelling.tsx  # 📜 Camadas do tênis
+    │   │   ├── BrandStrip.tsx      # Marquee de logos
+    │   │   ├── CategoryShowcase.tsx
+    │   │   ├── BestSellers.tsx
+    │   │   ├── Testimonials.tsx
+    │   │   ├── InstagramFeed.tsx
+    │   │   ├── Newsletter.tsx
+    │   │   ├── ProductCardEnhanced.tsx
+    │   │   ├── ProductFilters.tsx
+    │   │   ├── SortDropdown.tsx
+    │   │   ├── ActiveFilters.tsx
+    │   │   └── QuickViewModal.tsx
+    │   └── pdp/                    # Product Detail Page
+    │       ├── ImageGallery.tsx    # Zoom + lightbox
+    │       ├── SizeSelector.tsx
+    │       ├── ProductTabs.tsx
+    │       ├── RelatedProducts.tsx
+    │       ├── Breadcrumbs.tsx
+    │       └── StickyBuyBar.tsx
+    ├── data/products.ts            # Catálogo mock enriquecido
+    └── lib/
+        ├── types.ts                # TypeScript interfaces
+        ├── store.ts                # Cart (Zustand + persist)
+        ├── wishlistStore.ts        # Wishlist (Zustand + persist)
+        ├── constants.ts            # Business rules
+        └── utils.ts                # cn(), formatPrice(), etc.
 ```
 
 ---
 
-## 💡 Destaque de Código
+## 💡 Destaques Técnicos
 
-### Zustand - Gerenciamento do Carrinho
-
-O `useCartStore` gerencia todo o estado do carrinho de forma simples e eficaz, sem a necessidade de Context Providers complexos:
+### Zustand com persistência
 
 ```typescript
-// src/lib/store.ts
-export const useCartStore = create<CartState>((set, get) => ({
-    items: [],
-    isOpen: false,
-    toggleCart: () => set({ isOpen: !get().isOpen }),
-    addItem: (product) =>
-        set((state) => {
-            const existing = state.items.find((i) => i.id === product.id);
-            if (existing) {
-                return {
-                    items: state.items.map((i) =>
-                        i.id === product.id ? { ...i, quantity: i.quantity + 1 } : i
-                    ),
-                };
-            }
-            return { items: [...state.items, { ...product, quantity: 1 }] };
-        }),
-    // ... remove, total, clearCart
-}));
+export const useCartStore = create<CartState>()(
+  persist(
+    (set, get) => ({
+      items: [],
+      addItem: (product, selectedSize) => set((state) => {
+        const existing = state.items.find(
+          (i) => i.id === product.id && i.selectedSize === selectedSize
+        );
+        // ... lógica de incremento com limite de 5 unidades
+      }),
+      applyCoupon: (code) => {
+        if (code.toUpperCase() === "BEMVINDO10") {
+          set({ couponDiscount: 0.1 });
+          return true;
+        }
+        return false;
+      },
+      // ...
+    }),
+    { name: "sneakers:cart" }
+  )
+);
 ```
 
-### Página Dinâmica de Produto (Server Component)
-
-Utilizando o poder dos Server Components para buscar dados e gerar metadados de SEO dinamicamente:
+### Parallax controlado por mouse (Hero)
 
 ```typescript
-// src/app/(shop)/product/[id]/page.tsx
-export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
-    const { id } = await params;
-    const product = PRODUCTS.find((p) => p.id === id);
+const rawX = useMotionValue(0);
+const bgX = useSpring(rawX, { stiffness: 80, damping: 20 });  // camada lenta
+const fgX = useSpring(rawX, { stiffness: 160, damping: 18 });  // camada rápida
 
-    return {
-        title: `${product?.name} | Sneakers`,
-        description: product?.description,
-    };
+useEffect(() => {
+  const handleMouseMove = (e: MouseEvent) => {
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    rawX.set(x);
+  };
+  // ...
+}, []);
+```
+
+### OG Image dinâmica (Edge Runtime)
+
+```typescript
+export const runtime = "edge";
+
+export async function GET(request: NextRequest) {
+  const title = searchParams.get("title");
+  return new ImageResponse(
+    <div style={{ display: "flex", background: "#0B0B0F", ... }}>
+      <h1>{title}</h1>
+      <img src={imageUrl} />
+    </div>,
+    { width: 1200, height: 630 }
+  );
 }
 ```
 
 ---
 
-## 🎨 Características de Design
+## 🧪 Critérios de Aceitação (validados)
 
-* **Paleta de Cores:** Foco em Branco, Cinza e o Vermelho vibrante da marca (Primary Color).
-* **Tipografia:** Fontes modernas e legíveis.
-* **Interatividade:** Feedback visual imediato ao passar o mouse ou clicar em elementos.
-* **Glassmorphism:** Efeitos de desfoque no header e elementos flutuantes.
+- [x] Build (`npm run build`) sem erros de TypeScript
+- [x] Fluxo completo: Home → Listing → PDP → Cart → Checkout → Success
+- [x] 3 fatores UAU funcionam (parallax, 3D, storytelling)
+- [x] Filtros atualizam grid com animação
+- [x] Cupom `BEMVINDO10` aplica 10% de desconto
+- [x] Wishlist persiste após reload (localStorage)
+- [x] Carrinho persiste após reload
+- [x] OG image gera corretamente em `/api/og`
+- [x] JSON-LD renderiza no `<head>` das PDPs
+- [x] Sitemap inclui todas as rotas
+- [x] Loading skeletons aparecem durante carregamento
+- [x] 404 estilizado em rotas inválidas
+- [x] Responsivo em 4 breakpoints
+
+---
+
+## 📊 Roadmap / Próximos Passos
+
+Ideias para expansão futura:
+- [ ] Dark mode toggle
+- [ ] Testes E2E com Playwright
+- [ ] Integração com backend real (Supabase/Prisma)
+- [ ] Stripe para pagamentos reais
+- [ ] CMS (Sanity/Strapi) para gerenciar produtos
+- [ ] PWA (offline + push notifications)
+- [ ] i18n (PT/EN)
+- [ ] Analytics (Plausible / Vercel Analytics)
+
+---
+
+## 📄 Licença
+
+Projeto de portfólio demonstrativo. Código aberto para fins educacionais.
+
+Marcas, logos e nomes de produtos pertencem aos seus respectivos proprietários.
 
 ---
 
 ## 👨‍💻 Autor
 
-Desenvolvido por [Emerson Sinezio](https://github.com/EmersonSinezio)
+**Emerson Sinezio**
+
+[GitHub](https://github.com/EmersonSinezio) · [LinkedIn](https://linkedin.com/in/emersonsineziio)
 
 ---
 
-**⭐ Se este projeto foi útil para você, considere dar uma estrela no repositório!**
+**⭐ Se este projeto te inspirou, deixe uma estrela!**
